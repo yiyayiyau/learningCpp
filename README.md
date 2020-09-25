@@ -1,2 +1,2 @@
-# learningC-
+# learningC++
 Notes of learing C++
