@@ -1,0 +1,1 @@
+add_library(Adder adder1.cpp adder1.h)
