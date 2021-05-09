@@ -6,6 +6,8 @@ add_executable(${PROJECT_NAME} Main.cpp adder.cpp) #if there are many files, jus
 
 add_subdirectory(Adder) # if you have libraries
 
+add_subdirectory(external/glfw)
+
 target_include_directories(${PROJECT_NAME} PUBLIC Adder) # with this line, in main.cpp you donnot need #include with path
 # and you will get a lib-file in build
 
