@@ -10,7 +10,7 @@ add_subdirectory(external/glfw)
 
 target_include_directories(${PROJECT_NAME} PUBLIC Adder) # with this line, in main.cpp you donnot need #include with path
 # and you will get a lib-file in build
-
+ 
 target_link_directories(${PROJECT_NAME} PRIVATE Adder/)
 
 target_link_libraries(${PROJECT_NAME} Adder) # Project_name lib_name1 lib_name2
