@@ -9,3 +9,5 @@ chmod +x configure.sh build.sh run.sh
 
 Windows:
 .bat files
+
+cmake .. -G "MinGW Makefiles"
