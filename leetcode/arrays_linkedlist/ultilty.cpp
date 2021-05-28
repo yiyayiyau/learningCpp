@@ -1,9 +1,5 @@
 #include "ultilty.h"
 
-/*@brief Convert vector of numbers to string
-* @a_v no-leer input vector
-* @return string
-*/
 template <class T>
 std::string vto_string(std::vector<T> &a_v){  
     std::string ss = "{ ";
@@ -17,17 +13,6 @@ std::string vto_string(std::vector<T> &a_v){
     return ss;
 }
 
-/*@brief two pointes, first point to the last unduplicates number,
-* second point to the loop-index.
-* If two object are not same, first point move to the next and 
-* copy the value from second point; if same, second pointer move 
-* on.
-*
-* ------time complex O(n), space complex O(1)------
-*
-* @param nums sorted vector
-* @return number of unduplicate numbers
-*/
 int removeDuplicates(std::vector<int> &nums)
 {
     if (nums.empty())
@@ -43,10 +28,7 @@ int removeDuplicates(std::vector<int> &nums)
     }
     return index + 1;
 }
-/*@brief Use STL-unique: remove consecutive (adjacent) duplicates.
-*
-* ------time complex O(n), space complex O(1)------
-*/
+
 int removeDuplicates_STL(std::vector<int> &nums){
     auto b = unique(nums.begin(), nums.end() );
     return distance( nums.begin(), b );
@@ -87,9 +69,7 @@ void test_removeDuplicates()
      std::endl;
 }
 
-/*@breif Get c++ version
-*@return string of version
-*/
+
 std::string getVersion()
 {
     std::string s;
