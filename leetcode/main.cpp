@@ -4,10 +4,7 @@
 #include "ultilty.h"
 #include "infTech.h"
 
-int main(int argc, char** argv)
-{
-    std::cout << "Hello LeetCode" << std::endl;
-
+void test(){
     // test_getVersion();
     // test_removeDuplicates();
 
@@ -21,7 +18,19 @@ int main(int argc, char** argv)
 
     // test_print_sizelimits();
 
-    test_getchar();
+    // test_getchar();
+    // test_scanf();
+
+    test_array();
+    test_swap();
+
+}
+
+int main(int argc, char** argv)
+{
+    std::cout << "Hello LeetCode" << std::endl;
+
+    test();
 
     std::cin.get();
     return 0;

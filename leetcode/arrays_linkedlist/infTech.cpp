@@ -69,8 +69,60 @@ void test_print_sizelimits()
            sizeof(float), sizeof(double));
 }
 
-void test_getchar(){
+void test_getchar()
+{
     printf("Please give me a ziffer: ");
     char c = getchar();
     printf("The ziffer is: '%c'.\n", c);
+}
+
+int quadrat(int zahl)
+{
+    int ergebnis;
+    ergebnis = zahl * zahl;
+    return ergebnis;
+}
+void test_scanf()
+{
+    int ergebnis, zahl;
+    printf("Programm zum Berechnen des Quadrats einer ganzen: \n");
+    printf("Bitte geben Sie die Zahl ein:");
+    scanf("%d", &zahl);
+    printf("Die gegeben zahl ist: %d", zahl);
+    ergebnis = quadrat(zahl);
+    printf("Das Ergebnis ist: %d", ergebnis);
+}
+
+void print_array(int zahlen[]){
+    for (int i = 0; i < 10; i++){
+        printf("%d ", zahlen[i]);
+    }
+    printf("\n");
+}
+void test_array(){
+    int natZahlen[10] = {0,1,2,3,4,5,6,7,8,9};
+    print_array(natZahlen);
+    
+    int natZahlen1[10] = {0,1,2,3};
+    print_array(natZahlen1);
+
+    int natZahlen2[10] = {0};
+    print_array(natZahlen2);
+
+    int natZahlen3[10] = {1};
+    print_array(natZahlen3);
+}
+
+
+
+void swap(int *i, int *j){
+    auto tmp = *i;
+    *i = *j;
+    *j = tmp;
+}
+void test_swap(){
+    int i = 3, j = 5;
+    printf(" befor swap: %d, %d \n", i,j);
+    swap(&i, &j);
+    printf(" after swap: %d, %d \n", i,j);
 }
